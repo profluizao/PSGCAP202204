@@ -99,22 +99,56 @@
 --PARA SUBCATEGORIA CONTENDO A PALAVRA 'REFRESCO'
 --PARA PRODUTO CONTENDO A PALAVRA 'TANG'
 
-SELECT 
-	C.Descricao_Categoria as 'Categoria',
-	S.Descricao_Subcategoria AS 'Subcategoria',
-	P.Descricao_Produto AS 'Produto'
+--SELECT 
+--	C.Descricao_Categoria as 'Categoria',
+--	S.Descricao_Subcategoria AS 'Subcategoria',
+--	P.Descricao_Produto AS 'Produto'
+--FROM Produto AS P
+--INNER JOIN Subcategoria AS S ON S.ID_Subcategoria = P.ID_Subcategoria
+--INNER JOIN Categoria AS C ON C.ID_Categoria = P.ID_Categoria
+--WHERE (C.Descricao_Categoria LIKE 'bebidas')
+--AND (S.Descricao_Subcategoria LIKE '%refresco%')
+--AND (P.Descricao_Produto LIKE '%tang%')
+
+--SELECT COUNT(*) AS 'Quantidade'
+--FROM Produto AS P
+--INNER JOIN Subcategoria AS S ON S.ID_Subcategoria = P.ID_Subcategoria
+--INNER JOIN Categoria AS C ON C.ID_Categoria = P.ID_Categoria
+--WHERE (C.Descricao_Categoria LIKE 'bebidas')
+--AND (S.Descricao_Subcategoria LIKE '%refresco%')
+--AND (P.Descricao_Produto LIKE '%tang%')
+
+
+-----------------------------------------------------------------------------------------
+
+--EXERCÍCIO 5
+--A)
+--PESQUISAR OS 10 PRIMEIROS REGISTROS, EXIBINDO
+--- DESCRICAO_CATEGORIA
+--- DESCRICAO_SUBCATEGORIA
+--- DESCRICAO_PRODUTO
+--USANDO INNER JOIN.
+--PARA ID_CATEGORIA IGUAL 4.
+--PARA PRODUTO CONTENDO A PALAVRA 'ADRIA'
+--USANDO ALIAS
+--
+--B),
+--INFORMAR A QUANTIDADE DE REGISTROS DA PESQUISA ACIMA, SEM O TOP.
+
+SELECT TOP 10
+	C.Descricao_Categoria,
+	S.Descricao_Subcategoria,
+	P.Descricao_Produto
 FROM Produto AS P
 INNER JOIN Subcategoria AS S ON S.ID_Subcategoria = P.ID_Subcategoria
 INNER JOIN Categoria AS C ON C.ID_Categoria = P.ID_Categoria
-WHERE (C.Descricao_Categoria LIKE 'bebidas')
-AND (S.Descricao_Subcategoria LIKE '%refresco%')
-AND (P.Descricao_Produto LIKE '%tang%')
+WHERE (C.ID_Categoria = 4)
+AND (P.Descricao_Produto LIKE '%adria%')
 
 SELECT COUNT(*) AS 'Quantidade'
 FROM Produto AS P
 INNER JOIN Subcategoria AS S ON S.ID_Subcategoria = P.ID_Subcategoria
 INNER JOIN Categoria AS C ON C.ID_Categoria = P.ID_Categoria
-WHERE (C.Descricao_Categoria LIKE 'bebidas')
-AND (S.Descricao_Subcategoria LIKE '%refresco%')
-AND (P.Descricao_Produto LIKE '%tang%')
+WHERE (C.ID_Categoria = 4)
+AND (P.Descricao_Produto LIKE '%adria%')
 
