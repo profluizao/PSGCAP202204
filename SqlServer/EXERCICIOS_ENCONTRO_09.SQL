@@ -38,7 +38,7 @@ MISSÃO PARA O ENCONTRO 09
 --	Situacao BIT NULL DEFAULT 1,
 --	DataInclusao DATETIME NULL DEFAULT GETDATE(),
 --	DataAlteracao DATETIME NULL,
---	DataExclusao DATETIME NULL
+--	DataExclusao DATETIME NULL,
 --	CONSTRAINT PK_Cliente PRIMARY KEY (ID_Cliente)
 --)
 
@@ -50,7 +50,7 @@ MISSÃO PARA O ENCONTRO 09
 --	Situacao BIT NULL DEFAULT 1,
 --	DataInclusao DATETIME NULL DEFAULT GETDATE(),
 --	DataAlteracao DATETIME NULL,
---	DataExclusao DATETIME NULL
+--	DataExclusao DATETIME NULL,
 --	CONSTRAINT PK_Pedido PRIMARY KEY (ID_Pedido)
 --)
 
@@ -60,7 +60,7 @@ MISSÃO PARA O ENCONTRO 09
 --	Situacao BIT NULL DEFAULT 1,
 --	DataInclusao DATETIME NULL DEFAULT GETDATE(),
 --	DataAlteracao DATETIME NULL,
---	DataExclusao DATETIME NULL
+--	DataExclusao DATETIME NULL,
 --	CONSTRAINT PK_Carrinho PRIMARY KEY (ID_Carrinho)
 --)
 
@@ -72,7 +72,7 @@ MISSÃO PARA O ENCONTRO 09
 --	Situacao BIT NULL DEFAULT 1,
 --	DataInclusao DATETIME NULL DEFAULT GETDATE(),
 --	DataAlteracao DATETIME NULL,
---	DataExclusao DATETIME NULL
+--	DataExclusao DATETIME NULL,
 --	CONSTRAINT PK_Carrinho_Itens PRIMARY KEY (ID_Carrinho_Itens),
 --	CONSTRAINT FK_Carrinho_Carrinho_Itens FOREIGN KEY (ID_Carrinho) REFERENCES Carrinho(ID_Carrinho),
 --	CONSTRAINT FK_Produto_Carrinho_Itens FOREIGN KEY (ID_Produto) REFERENCES Produto(ID_Produto)
