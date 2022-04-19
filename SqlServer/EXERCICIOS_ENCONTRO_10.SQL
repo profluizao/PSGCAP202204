@@ -1,0 +1,28 @@
+MISSÃO PARA O ENCONTRO 10
+
+* USAR O DATABASE ATACADO202204
+
+1) ADICIONAR
+
+1.1) A TABELA Forma_Envio.
+
+ID_Forma_Envio INT NOT NULL
+Descricao_Forma_Envio VARCHAR(MAX)
+Valor_Por_Quilo_Forma_Envio DECIMAL (9,2)
+MAIS CAMPOS DE CONTROLE
+
+1.2) A TABELA Forma_Pagto.
+
+ID_Forma_Pagto INT NOT NULL
+ID_Tipo_Forma_Pagto INT NOT NULL
+Descricao_Forma_Envio VARCHAR(MAX)
+MAIS CAMPOS DE CONTROLE
+
+1.3) A TABELA Tipo_Forma_Pagto
+
+ID_Tipo_Forma_Pagto INT NOT NULL
+Descricao_Forma_Pagto VARCHAR(MAX)
+MAIS CAMPOS DE CONTROLE
+
+
+
