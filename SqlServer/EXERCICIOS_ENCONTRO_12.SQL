@@ -48,3 +48,25 @@ INSERT INTO Funcionario_Dados_Pessoais(
 			DataAlteracao, 
 			DataExclusao
 		FROM Funcionario
+
+--CRIANDO TABELA FUNCIONARIO_DADOS_EMPRESA
+CREATE TABLE Funcionarios_Dados_Empresa(
+	ID_FuncDadosEmpresa BIGINT NOT NULL IDENTITY(1,1),
+	Matricula_Funcionario bigint NOT NULL,
+	Nome_Funcionario varchar(50) NOT NULL,
+	Sobrenome_Funcionario varchar(50) NOT NULL,
+	Data_Admissao_Funcionario datetime NOT NULL,
+	Ctps_Funcionario varchar(50) NOT NULL,
+	Ctps_Num_Funcionario bigint NOT NULL,
+	Ctps_Serie_Funcionario int NOT NULL,
+	Situacao bit NULL default 1,
+	DataInclusao datetime NULL default getdate(),
+	DataAlteracao datetime NULL,
+	DataExclusao datetime NULL,	
+	CONSTRAINT PK_FuncDadosEmpresa PRIMARY KEY (ID_FuncDadosEmpresa)
+) ON PRIMARY
+GO
+
+
+
+
