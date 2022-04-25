@@ -17,3 +17,34 @@ CREATE TABLE Funcionario_Dados_Pessoais(
 	CONSTRAINT PK_FuncDadosPessoais PRIMARY KEY (ID_Funcionario)
 )
 GO
+
+--IMPORTANDO DADOS PARA A NOVA TABELA.
+--ATENÇÃO A CONVERSÃO DE DADOS REALIZADA PARA MATRICULA.
+
+INSERT INTO Funcionario_Dados_Pessoais(
+	ID_Funcionario, 
+	Matricula_Funcionario, 
+	Nome_Funcionario,
+	Sobrenome_Funcionario,
+	Sexo_Funcionario,
+	Datanasc_Funcionario,
+	Email_Funcionario,
+	ID_Pais,
+	Situacao,
+	DataInclusao,
+	DataAlteracao,
+	DataExclusao)
+		SELECT 
+			ID_Funcionario, 
+			CONVERT(BIGINT, Matricula_Funcionario) AS Matricula_Funcionario, 
+			Nome_Funcionario, 
+			Sobrenome_Funcionario, 
+			Sexo_Funcionario, 
+			Datanasc_Funcionario, 
+			Email_Funcionario, 
+			ID_Pais, 
+			Situacao, 
+			DataInclusao, 
+			DataAlteracao, 
+			DataExclusao
+		FROM Funcionario
