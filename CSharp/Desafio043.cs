@@ -28,19 +28,24 @@ namespace Cap202204ConsoleApp.Desafios
 
         public void Executar()
         {
-            foreach (Pessoa item in this.listaDePessoas)
-            {
-                int idade = this.CalcularIdade(item.DtNascimento);
-                item.Idade = idade;
-                if ((idade < 55) && (idade > 45))
-                {
-                    this.listaDePessoasSelecionadas.Add(item);
-                }
-            }
+            this.ProcessarListaPorIdades();
+            this.ProcessarPessoasSelecionadas();
+            this.ExibirPesoAltura();
+        }
 
+        private void ExibirPesoAltura()
+        {
+            double alturaMax = this.listaDePessoasParaPesoAltura.Max(pes => pes.Altura);
+            Console.Write("A maior altura é: {0}", alturaMax);
+
+            double pesoMax = this.listaDePessoasParaPesoAltura.Max(pes => pes.Peso);
+            Console.Write("O maior Peso é: {0}", pesoMax);
+        }
+
+        private void ProcessarPessoasSelecionadas()
+        {
             while (true)
             {
-                Console.Clear();
                 foreach (Pessoa item in this.listaDePessoasSelecionadas)
                 {
                     Console.WriteLine("Código: {0} | Nome Completo: {1} {2} | Idade: {3}",
@@ -61,6 +66,7 @@ namespace Cap202204ConsoleApp.Desafios
                         achado.Altura = Convert.ToDouble(Console.ReadLine());
 
                         this.listaDePessoasParaPesoAltura.Add(achado);
+                        this.listaDePessoasSelecionadas.Remove(achado);
                     }
                 }
                 Console.Write("Deseja parar (S/N):");
@@ -70,12 +76,6 @@ namespace Cap202204ConsoleApp.Desafios
                     break;
                 }
             }
-            
-            double alturaMax = this.listaDePessoasParaPesoAltura.Max(pes => pes.Altura);
-            Console.Write("A maior altura é: {0}", alturaMax);
-
-            double pesoMax = this.listaDePessoasParaPesoAltura.Max(pes => pes.Peso);
-            Console.Write("O maior Peso é: {0}", pesoMax);
         }
 
         private int CalcularIdade(DateTime dtNascimento)
@@ -87,6 +87,27 @@ namespace Cap202204ConsoleApp.Desafios
                 idade--;
             }
             return idade;
+        }
+
+        private void ProcessarListaPorIdades()
+        {
+            Console.Clear();
+
+            Console.Write("Informe da idade mínima: ");
+            int idadeMin = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Informe da idade máxima: ");
+            int idadeMax = Convert.ToInt32(Console.ReadLine());
+
+            foreach (Pessoa item in this.listaDePessoas)
+            {
+                int idade = this.CalcularIdade(item.DtNascimento);
+                item.Idade = idade;
+                if ((idade < idadeMax) && (idade > idadeMin))
+                {
+                    this.listaDePessoasSelecionadas.Add(item);
+                }
+            }
         }
     }
 }
