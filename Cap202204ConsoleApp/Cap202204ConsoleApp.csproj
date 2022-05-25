@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6497D198-849B-4B97-B3CE-C935F515AF2B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Cap202204ConsoleApp</RootNamespace>
+    <AssemblyName>Cap202204ConsoleApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Desafios\Desafio043.cs" />
+    <Compile Include="Desafios\Desafio044.cs" />
+    <Compile Include="Desafios\Desafio045.cs" />
+    <Compile Include="Desafios\DesafioDojo.cs" />
+    <Compile Include="Encontros\Encontro029.cs" />
+    <Compile Include="FakeDB\AlunoFakeDB.cs" />
+    <Compile Include="FakeDB\EstadoFakeFB.cs" />
+    <Compile Include="FakeDB\MunicipioFakeDB.cs" />
+    <Compile Include="FakeDB\PessoaFakeDB.cs" />
+    <Compile Include="FakeDB\RegiaoFakeDB.cs" />
+    <Compile Include="Models\Aluno.cs" />
+    <Compile Include="Encontro027\Funcionario.cs" />
+    <Compile Include="Encontro027\FuncionarioFakeDB.cs" />
+    <Compile Include="Models\Estado.cs" />
+    <Compile Include="Models\Municipio.cs" />
+    <Compile Include="Models\Pessoa.cs" />
+    <Compile Include="Models\Regiao.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Models\ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

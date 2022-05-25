@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Modelos.CampoPadronizado01">
+    <Position X="3.25" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CampoPadronizado01.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modelos.Estado">
+    <Position X="1" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAIAAAACAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Estado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modelos.Municipio">
+    <Position X="5.5" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAkAAiABAAAMAAAADAAAAgAAAAAAEAAAkACAAIA=</HashCode>
+      <FileName>Municipio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modelos.Regiao">
+    <Position X="3.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Regiao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modelos.CampoPadronizado02">
+    <Position X="3.25" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CampoPadronizado02.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
